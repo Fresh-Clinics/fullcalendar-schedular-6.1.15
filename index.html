@@ -1,40 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Include FullCalendar Scheduler JS -->
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler/index.global.min.js'></script>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+    <script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get the calendar element
-      const calendarEl = document.getElementById('calendar');
-
-      // Initialize the FullCalendar with resourceTimeGridDay view
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'resourceTimeGridDay',  // Set the initial view to resourceTimeGridDay
-        resources: [
-          // Define your list of resources here
-          { id: 'a', title: 'Room A' },
-          { id: 'b', title: 'Room B' },
-          { id: 'c', title: 'Room C' },
-          { id: 'd', title: 'Room D' }
-        ],
-        events: [
-          // Define your list of events here
-          { resourceId: 'a', title: 'Event 1', start: '2024-10-29T09:00:00', end: '2024-10-29T11:00:00' },
-          { resourceId: 'b', title: 'Event 2', start: '2024-10-29T10:00:00', end: '2024-10-29T12:00:00' },
-          { resourceId: 'c', title: 'Event 3', start: '2024-10-29T11:00:00', end: '2024-10-29T13:00:00' },
-          { resourceId: 'd', title: 'Event 4', start: '2024-10-29T12:00:00', end: '2024-10-29T14:00:00' }
-        ]
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
       });
 
-      // Render the calendar
-      calendar.render();
-    });
-  </script>
-</head>
-<body>
-  <!-- Calendar container -->
-  <div id='calendar'></div>
-</body>
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
 </html>
