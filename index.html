@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler/index.global.min.js'></script>
-   <script src='fullcalendar-scheduler/dist/index.global.js'></script>
+<script src='fullcalendar-scheduler/dist/index.global.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -12,19 +8,4 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
   ]
 });
 ...
-</script> <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        const calendarEl = document.getElementById('calendar')
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'resourceTimelineMonth'
-        })
-        calendar.render()
-      })
-
-    </script>
-  </head>
-  <body>
-    <div id='calendar'></div>
-  </body>
-</html>
+</script>
